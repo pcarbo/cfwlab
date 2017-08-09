@@ -1,2 +1,4 @@
 # cfwlab
-R package containing data from CFW genome-wide mapping study for use in workshops.
+
+R package containing data from the CFW genome-wide mapping study for
+use in courses.
