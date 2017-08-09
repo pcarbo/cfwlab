@@ -3,13 +3,13 @@ Encoding: UTF-8
 Type: Package
 Version: 1.0-0
 Date: 2017-08-09
-Title: CFW genome-wide mapping study data
+Title: CFW genome-wide association study data
 Authors@R: c(person("Peter","Carbonettto",role=c("aut","cre"),
                     email="jnovembre@uchicago.edu"),
              person("John","Novembre",role="aut"))
 URL: https://github.com/pcarbo/cfwlab
 BugReports: https://github.com/pcarbo/cfwlab/issues
-Description: *Description goes here.*
+Description: Description goes here.
 License: GPL (>= 3)
 NeedsCompilation: no
 
