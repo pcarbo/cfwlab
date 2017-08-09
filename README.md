@@ -1,8 +1,8 @@
 # cfwlab
 
 R package containing data from the
-[CFW genome-wide mapping study](https://dx.doi.org/10.1038/ng.3609)
-for use in courses.
+[CFW genome-wide mapping study](https://dx.doi.org/10.1038/ng.3609),
+designed for use in courses.
 
 ## Quick Start
 

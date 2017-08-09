@@ -2,4 +2,9 @@
 
 * Give instructions for installing package using devtools.
 
+* Fill out 
+
 * Create cfw.pheno.RData.
+
+* Write man page for data(cfw.pheno).
+

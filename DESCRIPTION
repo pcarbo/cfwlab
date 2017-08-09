@@ -3,7 +3,7 @@ Encoding: UTF-8
 Type: Package
 Version: 1.0-0
 Date: 2017-08-09
-Title: Data from CFW genome-wide mapping study for courses
+Title: CFW genome-wide mapping study data
 Authors@R: c(person("Peter","Carbonettto",role=c("aut","cre"),
                     email="jnovembre@uchicago.edu"),
              person("John","Novembre",role="aut"))
