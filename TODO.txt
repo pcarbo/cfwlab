@@ -1,1 +1,5 @@
 * Fill out Description field in DESCRIPTION.
+
+* Give instructions for installing package using devtools.
+
+* Create cfw.pheno.RData.
