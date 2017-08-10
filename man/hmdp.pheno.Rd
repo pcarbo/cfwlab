@@ -18,8 +18,8 @@
 \references{
   Farber, C. R., Bennett, B. J., Orozco, L., Zou, W., Lira, A.,
   Kostem, E., Kang, H. M., Furlotte, N., Berberyan, A., Ghazalpour, A.,
-  Suwanwela, J., Drake, T. A., Eskin, E., Wang, Q. T., Teitelbaum, S. L.
-  and Lusis, A. J. (2011) Mouse genome-wide association and systems
+  Suwanwela, J., Drake, T. A., Eskin, E., Wang, Q. T., Teitelbaum,
+  S. L. and Lusis, A. J. (2011) Mouse genome-wide association and systems
   genetics identify Asxl2 as a regulator of bone mineral density and
   osteoclastogenesis. \emph{PLoS Genetics} \bold{7}, e1002038.
   \url{https://doi.org/10.1371/journal.pgen.1002038}
