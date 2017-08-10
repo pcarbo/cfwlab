@@ -37,6 +37,7 @@ The columns of \code{cfw.map} are as follows:
     \item{quality}{Imputation quality of each SNP. Here we define
       "imputation quality" as the proportion of samples in which the
       probability of the maximum-probability genotype is >0.5.}
+  }
 }
 \source{
   Data were retrieved and compiled from
