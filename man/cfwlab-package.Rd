@@ -4,8 +4,8 @@
 \docType{package}
 \title{CFW genome-wide association study data}
 \description{
-This R package contains data from Parker *et al*, 2016. These data were
-collected as part of a large study to assess the viability of using
+This R package contains data from Parker \emph{et al}, 2016. These data
+were collected as part of a large study to assess the viability of using
 Carworth Farms White (CFW) mice for mapping genes and genetic loci
 underlying complex traits relevant to the study of human disease and
 psychology.

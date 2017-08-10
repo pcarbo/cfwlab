@@ -1,7 +1,3 @@
-* Check "cfwlab-package" help in RStudio.
-
-* Check cfw.pheno help in RStudio.
-
-* Give instructions for installing package using devtools.
+* Give instructions for loading and inspecting the data sets.
 
 * Add example in cfwlab-package.Rd for loading all the data.

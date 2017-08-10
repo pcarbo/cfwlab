@@ -7,8 +7,33 @@ designed for use in courses. These data were compiled from the
 
 ## Quick Start
 
-*Add instructions here for installing the R package and loading the
-data sets into R.*
+1. Install the cfwlab package in R or RStudio. The easiest way to
+   install the package is with devtools:
+
+   ```R
+   install.packages("devtools")
+   library(devtools)
+   install_github("pcarbo/cfwlab")
+   ```
+
+2. Load the package into your R environment:
+
+   ```R
+   library(cfwlab)
+   ```
+
+3. Load the data sets, e.g.,
+
+   ```R
+   data(cfw.pheno)
+   ```
+
+
+4. Read the package documentation:
+
+   ```R
+   help(package = cfwlab)
+   ```
 
 ## Credits
 

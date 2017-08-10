@@ -7,7 +7,7 @@
   on 1,092 mice from the Carworth Farms White (CFW) outbred mouse stock.
   All mice are males. 
 }
-\usage{data(popres)}
+\usage{data(cfw.pheno)}
 \format{
   Individual columns of the table \code{cfw.pheno} are as follows:
   
@@ -84,7 +84,7 @@
   \url{http://dx.doi.org/10.5061/dryad.2rs41}.
 }
 \references{
-  See \link{cfwlab-package}.
+  See \link{cfwlab-package} for a list of references.
 }
 \examples{
 # View the first few rows of the phenotype data table.
