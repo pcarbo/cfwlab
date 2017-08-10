@@ -1,7 +1,7 @@
 Package: cfwlab
 Encoding: UTF-8
 Type: Package
-Version: 1.0-2
+Version: 1.0-3
 Date: 2017-08-10
 Title: CFW Genome-Wide Association Study DSata
 Authors@R: c(person("Peter","Carbonettto",role=c("aut","cre"),

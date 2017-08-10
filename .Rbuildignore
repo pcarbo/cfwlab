@@ -3,7 +3,6 @@
 ^LICENSE$
 ^docs$
 ^inst/code/README.txt$
-^inst/code/combined.thr.norm.fpkm$
-^inst/code/map\.txt$
+^inst/code/combined\.thr\.norm\.fpkm$
 ^inst/code/geno\.txt$
 ^inst/data$

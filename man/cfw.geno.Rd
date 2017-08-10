@@ -1,37 +1,23 @@
 \name{cfw.geno}
 \docType{data}
 \alias{cfw.geno}
-\title{TITLE GOES HERE}
+\title{Genotype data for 1,038 mice at 79,824 SNPs}
 \description{
-  DESCRIPTION GOES HERE.
+  Genotype data for CFW mice obtained by genotype-by-sequencing (GBS)
+  technology.
 }
 \usage{data(cfw.geno)}
 \format{
 
-The columns of \code{cfw.map} are as follows:
+  The genotype data are stored in an 1,038 x 79,824 matrix
+  \code{cfw.geno}. Rows are labeled by sample id, and columns are
+  labeled by marker (SNP) id. 
   
-  \describe{
-  
-    \item{id}{Unique label assigned to each SNP. This is either the
-      dbSNP database id (release 137), or if the SNP is not registered
-      in dbSNP, then it is an internal id of the form "cfw-N-XXXXXX",
-      where N is the chromsome number, and XXXXXX is the base-pair
-      position of the SNP on the chromosome.}
-
-    \item{chr}{Chromosome number.}
-
-    \item{pos}{Base-pair position on chromosome.}
-
-    \item{ref}{Reference allele. (This always matches the dbSNP reference
-      allele.)}
-    
-    \item{alt}{Alternative allele. This usually matches one of the
-      alternative alleles in the corresponding dbSNP entry.}
-
-    \item{quality}{Imputation quality of each SNP. Here we define
-      "imputation quality" as the proportion of samples in which the
-      probability of the maximum-probability genotype is >0.5.}
-  }
+  Genotypes are represented as "dosages"; specifically, the expected
+  number of times the alternative allele is observed in the
+  genotype. This will either be an integer (0, 1 or 2), or a real number
+  between 0 and 2 when there is some uncertainty in the estimate of the
+  genotype.
 }
 \source{
   Data were retrieved and prepared from
@@ -48,5 +34,8 @@ The columns of \code{cfw.map} are as follows:
 # genotype matrix.
 data(cfw.geno)
 geno[1:8,1:5]
+
+# All genotype dosages are between 0 and 2.
+range(cfw.geno)
 }
 \keyword{datasets}
