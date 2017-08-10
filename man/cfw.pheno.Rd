@@ -86,6 +86,9 @@
 \references{
   See \link{cfwlab-package} for a list of references.
 }
+\seealso{
+  \code{\link{cfw.geno}}
+}
 \examples{
 # View the first few rows of the phenotype data table.
 data(cfw.pheno)

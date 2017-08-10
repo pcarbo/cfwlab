@@ -44,6 +44,9 @@ The columns of \code{cfw.map} are as follows:
 \references{
   See \link{cfwlab-package} for a list of references.
 }
+\seealso{
+  \code{\link{cfw.geno}}
+}
 \examples{
 # View the first few rows of the marker data table.
 data(cfw.map)
