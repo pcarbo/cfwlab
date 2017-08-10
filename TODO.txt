@@ -1,4 +1,4 @@
-* Write man page for data(hmdp.pheno).
+* Check man page for data(hmdp.pheno).
 
 * Give instructions in README for loading and inspecting the data sets.
 
