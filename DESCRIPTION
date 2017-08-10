@@ -9,7 +9,13 @@ Authors@R: c(person("Peter","Carbonettto",role=c("aut","cre"),
              person("John","Novembre",role="aut"))
 URL: https://github.com/pcarbo/cfwlab
 BugReports: https://github.com/pcarbo/cfwlab/issues
-Description: Description goes here.
+Description: This R package contains data from "Genome-wide
+  association study of behavioral, physiological and gene expression
+  traits in outbred CFW mice" (C. Parker et al, 2016,
+  <DOI:10.1038/ng.3609>). These data were collected as part of a large
+  study to assess the viability of using Carworth Farms White (CFW)
+  mice for mapping genes and genetic loci underlying complex traits
+  relevant to the study of human disease and psychology.
 License: GPL (>= 3)
 NeedsCompilation: no
 

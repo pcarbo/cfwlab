@@ -35,3 +35,6 @@ To use these data for your research, please cite the references below.
 \seealso{
   \url{https://github.com/pcarbo/cfwlab}
 }
+\examples{
+  # Add code here to load all the data.
+}

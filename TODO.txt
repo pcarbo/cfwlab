@@ -1,10 +1,7 @@
-* Fill out Description field in DESCRIPTION.
-
 * Give instructions for installing package using devtools.
-
-* Fill out 
 
 * Create cfw.pheno.RData.
 
 * Write man page for data(cfw.pheno).
 
+* Add example in cfwlab-package.Rd for loading all the data.
