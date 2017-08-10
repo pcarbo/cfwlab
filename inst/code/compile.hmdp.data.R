@@ -2,7 +2,7 @@
 
 # Load the phenotype data from the HMDP study.
 hmdp.pheno <- read.csv("../data/farber2011.TableS1.csv",header = TRUE,
-                       stringsAsFactors = FALSE,comment.char = "#")
+                       stringsAsFactors = FALSE)
 
 # Adjust the BMD measurement units, and convert "sex" into a factor.
 hmdp.pheno <- transform(hmdp.pheno,

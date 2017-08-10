@@ -1,16 +1,3 @@
-# This table contains bone-mass density (BMD) data from Table S1 of
-#
-#   Farber et al (2011). Mouse genome-wide association and systems
-#   genetics identify Asxl2 as a regulator of bone mineral density and
-#   osteoclastogenesis. PLoS Genetics 7(4): e1002038.
-#
-# These data are part of a QTL mapping study for BMD traits using mice
-# from the Hybrid Mouse Diversity Panel (HMDP). The three columns on
-# the right-hand side give measurements of total body areal BMD
-# ("totalbody"), femur areal BMD ("femur"), and lumbar spine areal BMD
-# ("spine") in g/cm^2. These measurements were taken in 878 mice from
-# 97 HMDP strains.
-#
 strain,id,sex,totalbody,femur,spine
 129X1/SvJ,129X1_10,M,0.0549,0.0925,0.0695
 129X1/SvJ,129X1_4,M,0.0554,0.0911,0.0634
