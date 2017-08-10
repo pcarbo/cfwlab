@@ -1,3 +1,5 @@
-* Give instructions for loading and inspecting the data sets.
+* Write man page for data(hmdp.pheno).
+
+* Give instructions in README for loading and inspecting the data sets.
 
 * Add example in cfwlab-package.Rd for loading all the data.
