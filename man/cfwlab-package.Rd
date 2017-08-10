@@ -3,12 +3,19 @@
 \alias{cfwlab}
 \docType{package}
 \title{CFW genome-wide association study data}
-\description{Description goes here.}
-\section{Introduction}{
-  Introduction goes here.
-}
-\references{
-  
+\description{
+This R package contains data from Parker *et al*, 2016. These data were
+collected as part of a large study to assess the viability of using
+Carworth Farms White (CFW) mice for mapping genes and genetic loci
+underlying complex traits relevant to the study of human disease and
+psychology.
+
+For code implementing QTL mapping of physiological, behavioral and
+gene expression phenotypes, and other analyses of these data, see
+\url{https://github.com/pcarbo/cfw}.
+
+To use these data for your research, please cite the references below.
+} \references{
   Parker, C. C., Gopalakrishnan, S., Carbonetto, P., Gonzales, N.M.,
   Leung, E., Park, Y.J., Aryee, E., Davis, J., Blizard, D.A.,
   Ackert-Bicknell, C.L., Lionikas, A., Pritchard, J.K. and Palmer,
