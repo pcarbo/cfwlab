@@ -3,7 +3,7 @@ Encoding: UTF-8
 Type: Package
 Version: 1.0-2
 Date: 2017-08-10
-Title: CFW genome-wide association study data
+Title: CFW Genome-Wide Association Study DSata
 Authors@R: c(person("Peter","Carbonettto",role=c("aut","cre"),
                     email="jnovembre@uchicago.edu"),
              person("John","Novembre",role="aut"))
@@ -17,5 +17,6 @@ Description: This R package contains data from "Genome-wide
   mice for mapping genes and genetic loci underlying complex traits
   relevant to the study of human disease and psychology.
 License: GPL (>= 3)
+Depends: R (>= 2.10)
 NeedsCompilation: no
 

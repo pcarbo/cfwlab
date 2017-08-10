@@ -1,15 +1,13 @@
-\name{cfw.pheno}
+\name{cfw.map}
 \docType{data}
-\alias{cfw.pheno}
+\alias{cfw.map}
 \title{Information on 79,824 SNPs genotyped in CFW mice}
 \description{
   Data frame containing information about 79,824 single nucleotide
   polymorphisms (SNPs) on chromosomes 1-19 genotyped in the CFW outbred
   mouse cohort. All selected SNPs have >2\% minor allele frequency and
-  "imputation quality" >95\%.
-
-  All genomic positions are based on Mouse Genome Assembly 38 from the
-  NCBI database (mm10, December 2011).
+  "imputation quality" >95\%. All genomic positions are based on Mouse
+  Genome Assembly 38 from the NCBI database (mm10, December 2011).
 }
 \usage{data(cfw.map)}
 \format{
