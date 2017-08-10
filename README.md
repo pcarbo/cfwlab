@@ -22,12 +22,12 @@ designed for use in courses. These data were compiled from the
    library(cfwlab)
    ```
 
-3. Load the data sets, e.g.,
+3. Load and inspect the data sets, e.g.,
 
    ```R
    data(cfw.pheno)
+   head(cfw.pheno)
    ```
-
 
 4. Read the package documentation:
 
