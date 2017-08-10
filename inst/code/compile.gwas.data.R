@@ -63,26 +63,51 @@ map <- transform(map,
                  ref = factor(ref,bases),
                  alt = factor(alt,bases))
 
-# Read the genotype data.
+# Read the genotype data. To avoid downloading a large file every time
+# this script is run, you will need to download and uncompress
+# geno.txt.gz manually from the Data Dryad webpage:
+#
+#   http://dx.doi.org/10.5061/dryad.2rs41
+#
+cat("Reading genotype data.\n")
+n    <- nrow(map)
 geno <- fread("geno.txt",sep = " ",header = TRUE,showProgress = FALSE,
               colClasses = c("character","character",rep("double",n)))
-  class(out)    <- "data.frame"
-  rownames(out) <- out$id
-  return(list(discard = factor(out$discard),
-              geno    = as.matrix(out[-(1:2)])))
+class(geno)    <- "data.frame"
+rownames(geno) <- geno$id
+discard        <- factor(geno$discard)
+geno           <- as.matrix(geno[-(1:2)])
 
-# Returns a list object containing (1) a vector "discard" specifying
-# samples that are from potentially mislabeled flow samples, (2) an n
-# x p matrix of genotype "dosages" (expected allele counts), where n
-# is the number of samples and p is the number of SNPs.
-read.geno.dosage <- function (file, n) {
+# Discard genotype samples from mislabeled flowcell samples.
+cat("Preparing & filtering genotype data.\n")
+geno <- geno[discard == "no",]
+
+# Align the phenotypes and genotypes
+ids   <- intersect(pheno$id,rownames(geno))
+pheno <- pheno[match(ids,pheno$id),]
+geno  <- geno[match(ids,rownames(geno)),]
+
+# Returns the minor allele frequency given a vector of genotypes
+# encoded as allele counts.
+compute.maf <- function (geno) {
+  f <- mean(geno,na.rm = TRUE)/2
+  return(min(f,1-f))
 }
+
+# Discard SNPs with low "imputation quality" assessed by inspecting
+# the genotype probabilities. Retain SNPs for which: (1) at least 95%
+# of the samples have a maximum probability genotype greater than than
+# 0.5; (2) the minor allele frequency is greater than 2%.
+f       <- apply(geno,2,compute.maf)
+markers <- which(map$quality > 0.95 & f > 0.02)
+map     <- map[markers,]
+geno    <- geno[,markers]
 
 # Save the data to .RData files.
 cat("Saving data to .RData files.\n")
 cfw.pheno <- pheno
-map   <- map
+cfw.map   <- map
 cfw.geno  <- geno
 save(list = "cfw.pheno",file = "cfw.pheno.RData")
-save(list = "map",  file = "map.RData")
+save(list = "cfw.map",  file = "cfw.map.RData")
 save(list = "cfw.geno", file = "cfw.geno.RData")

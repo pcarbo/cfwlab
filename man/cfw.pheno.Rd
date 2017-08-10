@@ -1,10 +1,10 @@
 \name{cfw.pheno}
 \docType{data}
 \alias{cfw.pheno}
-\title{Phenotype data for 1,092 CFW male mice}
+\title{Phenotype data for 1,038 CFW male mice}
 \description{
   The data frame contains physiological and behavioural phenotype data
-  on 1,092 mice from the Carworth Farms White (CFW) outbred mouse stock.
+  on 1,038 mice from the Carworth Farms White (CFW) outbred mouse stock.
   All mice are males. 
 }
 \usage{data(cfw.pheno)}
