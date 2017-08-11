@@ -8,6 +8,5 @@ R CMD check --as-cran cfwlab_1.0-3.tar.gz
 
 to do
 =====
-* Check man page for data(hmdp.pheno).
 * Give instructions in README for loading and inspecting the data sets.
 * Add example in cfwlab-package.Rd for loading all the data.
