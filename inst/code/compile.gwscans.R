@@ -21,7 +21,6 @@ analyses <- list(
                  outliers=function (x) x < (-40) | x > 50),
   tibia   = list(pheno="tibia",cov=c("SW6","SW16","sacweight"),
                  outliers=function (x) x < (-1.5)),
-  BMD     = list(pheno="BMD",cov="SW16",outliers=function (x) x > 0.14),
   abBMD   = list(pheno="abBMD",cov="SW16",outliers=NULL),
   testis  = list(pheno="testisweight",cov="sacweight",
                  outliers=function (x) x < (-0.075)))
@@ -108,4 +107,3 @@ for (which.analysis in names(analyses)) {
 
 # Save results to file.
 save(list = "cfw.gwscan",file = "cfw.gwscan.RData")
-
