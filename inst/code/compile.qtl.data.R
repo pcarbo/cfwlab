@@ -68,10 +68,25 @@ for (which.analysis in names(analyses)) {
   cfw.pheno <- cfw.pheno[rows,]
   cfw.geno  <- cfw.geno[rows,]
 
-  # Compute association p-values using GEMMA.
-  gwscan.gemma <- run.gemma(phenotype,covariates,pheno,X,map,
-                            gemmadir,gemma.exe,chromosomes)
+  # Give summary of QTL mapping analysis.
+  cat(" - Mapping QTLs for",phenotype,"in",nrow(cfw.pheno),"mice, ")
+  if (!is.null(covariates)) {
+    cat("controlling for ",paste(covariates,collapse=" + "),".\n",sep="")
+  } else {
+    cat("with no covariates included.\n")
+  }
 
+  # Write the phenotype and covariate data to separate files.
+  cat(" - Writing phenotype data file.\n")
+  # TO DO.
+
+  cat(" - Writing covariate data file.\n")
+  # TO DO.
+  
+  write.gemma.pheno(paste0(gemmadir,"/pheno.txt"),phenotype,pheno)
+  write.gemma.covariates(paste0(gemmadir,"/covariates.txt"),covariates,pheno) 
+
+  
   # Add a new row to the QTL mapping results.
   
   stop()
