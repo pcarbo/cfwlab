@@ -15,6 +15,10 @@
   (\code{"totalbody"}), femur areal BMD (\code{"femur"}), and lumbar
   spine areal BMD (\code{"spine"}). Units are mg/cm^2.
 }
+\details{
+  These data were compiled using script \code{compile.hmdp.data.R} in
+  the \code{inst} package directory.
+}
 \references{
   Farber, C. R., Bennett, B. J., Orozco, L., Zou, W., Lira, A.,
   Kostem, E., Kang, H. M., Furlotte, N., Berberyan, A., Ghazalpour, A.,

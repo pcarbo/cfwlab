@@ -8,7 +8,6 @@
 }
 \usage{data(cfw.geno)}
 \format{
-
   The genotype data are stored in an 1,038 x 79,824 matrix
   \code{cfw.geno}. Rows are labeled by sample id, and columns are
   labeled by marker (SNP) id. 
@@ -18,6 +17,10 @@
   genotype. This will either be an integer (0, 1 or 2), or a real number
   between 0 and 2 when there is some uncertainty in the estimate of the
   genotype.
+}
+\details{
+  These data were compiled using script \code{compile.gwas.data.R} in
+  the \code{inst} package directory.
 }
 \source{
   Data were retrieved and prepared from

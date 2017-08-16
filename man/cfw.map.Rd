@@ -37,6 +37,10 @@ The columns of \code{cfw.map} are as follows:
       probability of the maximum-probability genotype is >0.5.}
   }
 }
+\details{
+  These data were compiled using script \code{compile.gwas.data.R} in
+  the \code{inst} package directory.
+}
 \source{
   Data were retrieved and compiled from
   \url{http://dx.doi.org/10.5061/dryad.2rs41}.

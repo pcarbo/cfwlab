@@ -36,5 +36,10 @@ To use these data for your research, please cite the references below.
   \url{https://github.com/pcarbo/cfwlab}
 }
 \examples{
-  # Add code here to load all the data.
+  # Load all the data from this package.
+  data(cfw.pheno)
+  data(hmdp.pheno)
+  data(cfw.map)
+  data(cfw.geno)
+  data(cfw.gwscan)
 }

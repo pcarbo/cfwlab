@@ -1,4 +1,4 @@
-# Compile the phenotype and genotype data from files stored in theq
+# Compile the phenotype and genotype data from files stored in the
 # Data Dryad repository.
 library(curl)
 suppressMessages(library(data.table))
