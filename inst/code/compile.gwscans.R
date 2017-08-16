@@ -96,16 +96,16 @@ for (which.analysis in names(analyses)) {
   # Run GEMMA.
   # chromosome using the kinship matrix computed using all the
   # markers *not* on the chromosome.
-  cat(" - Computing p-values for ",nrow(cfw.map),"candidate SNPs.\n")
+  cat(" - Computing p-values for",nrow(cfw.map),"candidate SNPs.\n")
   system("./gemma -g geno.txt -a map.txt -p pheno.txt -c cov.txt -lm 2",
          ignore.stdout = TRUE)
 
-  stop()
-
   # Load the results of the GEMMA association analysis.
+  cat(" - Reading GEMMA results from file.\n")
   cfw.gwscan[[which.analysis]] <-
     read.gemma.results("output/result.assoc.txt")$log10p
 }
 
 # Save results to file.
-# TO DO.
+save(list = "cfw.gwscan",file = "cfw.gwscan.RData")
+

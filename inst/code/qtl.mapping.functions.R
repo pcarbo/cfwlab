@@ -59,10 +59,23 @@ write.gemma.map <- function (file, map)
   write.table(map[c("id","pos","chr")],file,sep = " ",quote = FALSE,
               row.names = FALSE,col.names = FALSE)
 
+# Store the genotype dosages as a space-delimited text file in the
+# format used by GEMMA, in which we have one row per SNP, and one
+# column per sample. The first three columns give the SNP id and
+# the two SNP alleles.
+write.gemma.geno <- function (file, geno, map) {
+  geno <- t(geno)
+  geno <- as.data.frame(geno,check.names = FALSE)
+  geno <- round(geno,digits = 3)
+  geno <- cbind(map[c("id","ref","alt")],geno)
+  write.table(geno,file,sep = " ",quote = FALSE,row.names = FALSE,
+              col.names = FALSE)
+}
+
 # This function reads in the GEMMA association results from GEMMA, and
 # returns a data frame containing 4 columns: chromosome number
-# ("chr"); base-pair position ("pos"); SNP id ("id"); and the base-10
-# logarithm of the p-value ("log10p").
+# ("chr"); base-pair position ("pos"); SNP id ("id"); and the negative
+# base-10 logarithm of the p-value ("log10p").
 read.gemma.results <- function (file) {
   out <- read.table(file,sep = "\t",header = TRUE,check.names = FALSE,
                        quote = "",stringsAsFactors = FALSE)
