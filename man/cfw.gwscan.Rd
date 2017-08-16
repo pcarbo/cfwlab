@@ -3,8 +3,8 @@
 \alias{cfw.gwscan}
 \title{Selected QTL mapping results from CFW study}
 \description{
-  Results of genome-wide scans for 8 physiological phenotypes from CFW
-  study. Association p-values were computed using the program GEMMA.
+  Results of several genome-wide scans from the CFW study. Association
+  p-values were computed using the program GEMMA.
 }
 \usage{data(cfw.gwscan)}
 \format{
@@ -44,8 +44,8 @@
 }
 \details{
   These QTL mapping results were generated using \code{gemma} version
-  0.96 and script \code{compile.gwscans.R} in the \code{inst} package
-  directory.
+  0.96 and script \code{compile.gwscans.R}, which can be found in the
+  \code{inst} package directory.
 }
 \references{
   See \link{cfwlab-package} for a list of references.

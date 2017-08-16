@@ -4,5 +4,6 @@
 ^docs$
 ^inst/code/README.txt$
 ^inst/code/combined\.thr\.norm\.fpkm$
+^inst/code/gemma$
 ^inst/code/geno\.txt$
 ^inst/data$
