@@ -26,9 +26,14 @@ analyses <- list(
   testis  = list(pheno="testisweight",cov="sacweight",
                  outliers=function (x) x < (-0.075)))
 
-# Initialize the table containing the QTL mapping results.
-cfw.qtls <- NULL
+# Load the SNP data.
+load("../../data/cfw.map.RData")
 
+# Initialize the table containing the QTL mapping results.
+cfw.gwscan        <- as.data.frame(matrix(0,nrow(cfw.map),length(analyses)))
+names(cfw.gwscan) <- names(analyses)
+cfw.gwscan        <- cbind(cfw.map[c("id","chr","pos")],cfw.gwscan)
+    
 # Repeat for each QTL analysis.
 for (which.analysis in names(analyses)) {
   cat("Running",which.analysis,"analysis:\n")
@@ -61,9 +66,8 @@ for (which.analysis in names(analyses)) {
   load("../../data/cfw.map.RData")
   load("../../data/cfw.geno.RData")
   
-  # Only analyze samples (i.e. rows of the genotype and phenotype
-  # matrices) for which the phenotype and all the covariates are
-  # observed.
+  # Only analyze samples (i.e., rows) for which the phenotype and all
+  # the covariates are observed.
   rows      <- which(!apply(is.na(cfw.pheno),1,any))
   cfw.pheno <- cfw.pheno[rows,]
   cfw.geno  <- cfw.geno[rows,]
@@ -76,20 +80,31 @@ for (which.analysis in names(analyses)) {
     cat("with no covariates included.\n")
   }
 
-  # Write the phenotype and covariate data to separate files.
+  # Write the phenotype data to a text file.
   cat(" - Writing phenotype data file.\n")
-  # TO DO.
+  write.gemma.pheno("pheno.txt",phenotype,cfw.pheno)
 
+  # Write the covariate data to a text file.
   cat(" - Writing covariate data file.\n")
-  # TO DO.
-  
-  write.gemma.pheno(paste0(gemmadir,"/pheno.txt"),phenotype,pheno)
-  write.gemma.covariates(paste0(gemmadir,"/covariates.txt"),covariates,pheno) 
+  write.gemma.covariates("cov.txt",covariates,cfw.pheno)
 
-  
-  # Add a new row to the QTL mapping results.
-  
+  # Write out the genotypes and SNP information.
+  cat(" - Writing genotype data to file.\n");
+  write.gemma.map("map.txt",cfw.map)
+  write.gemma.geno("geno.txt",cfw.geno,cfw.map)
+
+  # Run GEMMA.
+  # chromosome using the kinship matrix computed using all the
+  # markers *not* on the chromosome.
+  cat(" - Computing p-values for ",nrow(cfw.map),"candidate SNPs.\n")
+  system("./gemma -g geno.txt -a map.txt -p pheno.txt -c cov.txt -lm 2",
+         ignore.stdout = TRUE)
+
   stop()
+
+  # Load the results of the GEMMA association analysis.
+  cfw.gwscan[[which.analysis]] <-
+    read.gemma.results("output/result.assoc.txt")$log10p
 }
 
 # Save results to file.

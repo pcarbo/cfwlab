@@ -25,3 +25,49 @@ remove.outliers <- function (pheno, phenotype, covariates, outliers) {
   # Return the updated phenotype data table.
   return(pheno)
 }
+
+# This function writes the phenotype data to a file in the format used
+# by GEMMA. Each line of the file contains one phenotype observation.
+write.gemma.pheno <- function (file, phenotype, pheno) {
+  y <- pheno[phenotype]
+  if (is.numeric(y))
+    y <- round(y,digits = 6)
+  write.table(y,file,quote = FALSE,row.names = FALSE,col.names = FALSE)
+}
+
+# This function writes the covariate data to a file in the format used
+# by GEMMA. Each line corresponds to a sample. We must include an
+# additional covariate for the intercept.
+write.gemma.covariates <- function (file, covariates, pheno) {
+  if (is.null(covariates)) {
+    write.table(data.frame(rep(1,nrow(pheno))),file,sep = " ",quote = FALSE,
+                row.names = FALSE,col.names = FALSE)
+  } else {
+    write.table(cbind(1,data.frame(lapply(pheno[covariates],function (x) {
+      if (is.numeric(x))
+        round(x,digits=6)
+      else
+        x
+    }))),file,sep = " ",quote = FALSE,row.names = FALSE,col.names = FALSE)
+  }
+}
+
+# This function writes the SNP information to a space-delimited text
+# file in the format used by GEMMA. The file contains one line per
+# SNP, with three columns: id, base-pair position and chromosome.
+write.gemma.map <- function (file, map)
+  write.table(map[c("id","pos","chr")],file,sep = " ",quote = FALSE,
+              row.names = FALSE,col.names = FALSE)
+
+# This function reads in the GEMMA association results from GEMMA, and
+# returns a data frame containing 4 columns: chromosome number
+# ("chr"); base-pair position ("pos"); SNP id ("id"); and the base-10
+# logarithm of the p-value ("log10p").
+read.gemma.results <- function (file) {
+  out <- read.table(file,sep = "\t",header = TRUE,check.names = FALSE,
+                       quote = "",stringsAsFactors = FALSE)
+  out <- out[c("chr","ps","rs","p_lrt")]
+  out <- transform(out,p_lrt = -log10(p_lrt))
+  colnames(out) <- c("chr","pos","id","log10p")
+  return(out)
+}
