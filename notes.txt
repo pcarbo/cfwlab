@@ -5,9 +5,3 @@ Steps I take to build & check R package:
 R CMD build --resave-data cfwlab
 R CMD INSTALL cfwlab_1.0-6.tar.gz
 R CMD check --as-cran cfwlab_1.0-6.tar.gz
-
-to do
-=====
-* Give instructions in README for loading and inspecting the data sets.
-
-
