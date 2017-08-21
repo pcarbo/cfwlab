@@ -1,9 +1,8 @@
-# TO DO: Explain here what this script does, and how to use it.
-#
-# NOTES:
-#
-#  * First run compile.gwas.data.R before running this script.
-#
+# Compile genome-wide scans for several physiological traits.
+# Association p-values are computed for all SNPs using GEMMA. To run
+# this script, you must first generate the phenotype and genotype data
+# files using script compile.gwas.data.R, and store these data files
+# in the "data" folder of this repository.
 source("qtl.mapping.functions.R")
 
 # This data structure provides information about all the QTL
@@ -102,7 +101,7 @@ for (which.analysis in names(analyses)) {
   # Load the results of the GEMMA association analysis.
   cat(" - Reading GEMMA results from file.\n")
   cfw.gwscan[[which.analysis]] <-
-    read.gemma.results("output/result.assoc.txt")$log10p
+      read.gemma.results("output/result.assoc.txt")$log10p
 }
 
 # Save results to file.
