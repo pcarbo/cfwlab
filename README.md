@@ -39,7 +39,7 @@ designed for use in courses. These data were compiled from the
 
 The cfwlab package was developed by:
 
-[Peter Carbonetto](http://pcarbo.github.io) &
-[John Novembre](http://jnpopgen.org)<br>
+[Peter Carbonetto](http://pcarbo.github.io)<br>
+Research Computing Center and<br>
 Department of Human Genetics<br>
 University of Chicago

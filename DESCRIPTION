@@ -1,12 +1,11 @@
 Package: cfwlab
 Encoding: UTF-8
 Type: Package
-Version: 1.0-6
-Date: 2017-08-16
-Title: CFW Genome-Wide Association Study DSata
+Version: 1.0-7
+Date: 2017-08-23
+Title: CFW Genome-Wide Association Study Data
 Authors@R: c(person("Peter","Carbonettto",role=c("aut","cre"),
-                    email="jnovembre@uchicago.edu"),
-             person("John","Novembre",role="aut"))
+                    email="pcarbo@uchicago.edu"))
 URL: https://github.com/pcarbo/cfwlab
 BugReports: https://github.com/pcarbo/cfwlab/issues
 Description: This R package contains data from "Genome-wide

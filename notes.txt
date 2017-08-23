@@ -3,5 +3,5 @@ development notes
 Steps I take to build & check R package:
 
 R CMD build --resave-data cfwlab
-R CMD INSTALL cfwlab_1.0-6.tar.gz
-R CMD check --as-cran cfwlab_1.0-6.tar.gz
+R CMD INSTALL cfwlab_1.0-7.tar.gz
+R CMD check --as-cran cfwlab_1.0-7.tar.gz
