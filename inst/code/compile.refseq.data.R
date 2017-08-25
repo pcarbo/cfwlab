@@ -1,9 +1,5 @@
-# TO DO: Explain here what this script does, and how to use it.
-#
-# NOTES:
-#
-#   * NCBI release 38 of the Mouse Genome Assembly (mm10).
-#
+# Download and compile all (protein coding) gene annotations for NCBI
+# release 38 of the Mouse Genome Assembly.
 library(data.table)
 library(curl)
 

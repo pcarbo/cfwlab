@@ -11,8 +11,7 @@
 }
 \usage{data(cfw.map)}
 \format{
-
-The columns of \code{cfw.map} are as follows:
+  The columns of \code{cfw.map} are as follows:
   
   \describe{
   
