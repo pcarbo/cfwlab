@@ -38,7 +38,7 @@
     \item{BMD}{Bone-mineral density.}
 
     \item{TA, EDL, gastroc, plantaris, soleus}{Measured weights of
-       various muscles(in mg).}
+       various muscles (in mg).}
     
     \item{tibia}{Length of the tibia bone (in mm).}
      
