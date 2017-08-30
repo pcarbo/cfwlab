@@ -1,4 +1,4 @@
-# TO DO: Explain here what this script does.
+# Compile the recombination rate data from Brunschwig et al (2012).
 
 # Load the recombination rate data from Brunschwig et al (2012),
 # "lifted over" to the Mouse Genome Assembly 38 (mm10).
