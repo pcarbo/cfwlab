@@ -42,4 +42,6 @@ To use these data for your research, please cite the references below.
   data(cfw.map)
   data(cfw.geno)
   data(cfw.gwscan)
+  data(genes.m38)
+  data(recomb.m38)
 }
