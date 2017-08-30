@@ -17,20 +17,21 @@
 
     \item{pos}{Base-pair position on chromosome.}
 
-    \item{recomb.rate}{Estimated fine-scale recombination rate in units
-      4*Ne*r/kb, where e*Ne*r is the sex-averaged, population-scaled
+    \item{rate}{Estimated fine-scale recombination rate in units
+      4*Ne*r/kb, where 4*Ne*r is the population-scaled (sex-averaged)
       recombination rate. See the Brunschwig \emph{et al} paper for
       details.}
+  }
 }
 \details{
   These data were compiled using script \code{compile.recomb.data.R} in
   the \code{inst} package directory.
 
   The recombination rate data are from Table S1 of Brunschwig \emph{et
-  al}. Since these data were based on Mouse Genome Assembly 37 (mm9), the
-  LiftOver online utility from the UCSC Genome Browser website was
-  applied to these data to convert to Genome Assembly 38 (mm10)
-  co-coordinates.
+  al}. Since the original data are based on Mouse Genome Assembly 37
+  (mm9), the LiftOver online utility from the UCSC Genome Browser
+  website was applied to these data to convert to Genome Assembly 38
+  (mm10) co-coordinates.
 }
 \references{
   Brunschwig, H., Levi, L., Ben-David, E., Williams, R. W., Yakir, B. and

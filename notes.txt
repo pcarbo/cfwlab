@@ -1,5 +1,3 @@
-development notes
-=================
 Steps I take to build & check R package:
 
 R CMD build --resave-data cfwlab
