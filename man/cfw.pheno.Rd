@@ -35,7 +35,8 @@
       testing. \code{sacweight} is the body weight measured when the
       mouse is sacrificed.}
 
-    \item{BMD}{Bone-mineral density.}
+    \item{BMD}{"Areal" bone-mineral density (mg/cm^2) measured in the
+      femur bone.}
 
     \item{TA, EDL, gastroc, plantaris, soleus}{Measured weights of
        various muscles (in mg).}
