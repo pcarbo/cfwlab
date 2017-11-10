@@ -95,7 +95,8 @@ for (which.analysis in names(analyses)) {
   # chromosome using the kinship matrix computed using all the
   # markers *not* on the chromosome.
   cat(" - Computing p-values for",nrow(cfw.map),"candidate SNPs.\n")
-  system("./gemma -g geno.txt -a map.txt -p pheno.txt -c cov.txt -lm 2",
+  system(paste("./gemma -g geno.txt -a map.txt -p pheno.txt",
+               "-c cov.txt -lm 2"),
          ignore.stdout = TRUE)
 
   # Load the results of the GEMMA association analysis.
